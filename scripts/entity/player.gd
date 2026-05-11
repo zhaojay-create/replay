@@ -19,6 +19,13 @@ func _ready():
 func _exit_tree():
 	player_died.disconnect(_on_player_died)
 
+func apply_damage(damage: float) -> bool:
+	var was_alive := not is_dead
+	var result := super.apply_damage(damage)
+	if was_alive and is_dead:
+		player_died.emit(self)
+	return result
+
 func _physics_process(delta: float) -> void:
 	# 重力（死亡后也继续落下）
 	if not is_on_floor():
@@ -36,7 +43,6 @@ func _physics_process(delta: float) -> void:
 	# 自杀
 	if Input.is_action_just_pressed("suicide"):
 		apply_damage(max_health)
-		player_died.emit(self)
 		move_and_slide()
 		return
 	

@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var screen_transition: ColorRect
+@onready var ghost_container: Node2D = %GhostContainer
 
 func _ready() -> void:
 	var player = get_tree().get_first_node_in_group("player") as Player
@@ -20,6 +21,7 @@ func _handle_game_over(player: Player)-> void:
 	player.current_health = player.max_health
 	player.current_anim = null
 	player.play_animation(AnimationWrapper.new("idle"))
+	ghost_container.spawn_ghosts()
 	ReplayManager.start_recording(player.global_position)
 
 # 玩家死亡时淡出
