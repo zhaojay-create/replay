@@ -13,7 +13,7 @@ screen_transition = NodePath("CanvasLayer/ColorRect")
 
 [node name="Player" parent="." unique_id=200577764 instance=ExtResource("2_wklqy")]
 z_index = 100
-position = Vector2(220, 442)
+position = Vector2(252, 359)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1782587990]
 

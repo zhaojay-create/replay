@@ -6,7 +6,7 @@ signal player_died(player: Player)
 var spawn_location: Vector2
 
 @export var speed: float = 200.0
-@export var jump_velocity: float = -350.0
+@export var jump_velocity: float = -550.0
 @export var gravity: float = 980.0
 
 func _ready():
