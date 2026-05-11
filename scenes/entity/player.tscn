@@ -227,6 +227,7 @@ height = 26.0
 
 [node name="Player" type="CharacterBody2D" unique_id=200577764]
 texture_filter = 1
+collision_mask = 68
 script = ExtResource("1_dovo2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=898512333]
