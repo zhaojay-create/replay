@@ -13,14 +13,16 @@ config_version=5
 config/name="replay"
 run/main_scene="uid://bn08i67r53ueu"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 
 ReplayManager="*uid://uv4owk02o74i"
+LevelManager="*res://scenes/autoload/level_manager.tscn"
 
 [display]
 
+window/size/viewport_width=2048
+window/size/viewport_height=1056
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 

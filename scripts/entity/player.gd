@@ -13,8 +13,6 @@ func _ready():
 	super._ready()
 	add_to_group("player")
 	player_died.connect(_on_player_died)
-	spawn_location = global_position
-	ReplayManager.start_recording(global_position)
 
 func _exit_tree():
 	player_died.disconnect(_on_player_died)

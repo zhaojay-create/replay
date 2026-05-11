@@ -1,0 +1,9 @@
+class_name FinalPoint
+extends Area2D
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is Player:
+		LevelManager.go_to_next_level()

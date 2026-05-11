@@ -3,7 +3,6 @@ extends Node2D
 var ghost_scene: PackedScene = preload("res://scenes/entity/ghost.tscn")
 
 func spawn_ghosts() -> void:
-	print("spawn_ghosts")
 	# 如果没有回放数据，直接返回
 	if ReplayManager.get_run_count() <= 0:
 		return

@@ -16,6 +16,13 @@ func start_recording(spawn_pos: Vector2) -> void:
 	_spawn_position = spawn_pos
 	is_recording = true
 
+func _ready() -> void:
+	LevelManager.level_changed.connect(_on_level_changed)
+
+func _on_level_changed() -> void:
+	current_recording.clear()
+	histories.clear()
+	is_recording = false
 
 # 记录当前帧
 func record_frame() -> void:

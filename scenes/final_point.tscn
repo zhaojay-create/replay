@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cr0jnc550g0ph"]
+
+[ext_resource type="Texture2D" uid="uid://bisajli3um17q" path="res://assets/Animals/Cow/Cow.png" id="1_0fbnm"]
+[ext_resource type="Script" uid="uid://cepeww7dirlvd" path="res://scripts/interactable/final_point.gd" id="1_qu7rb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eked0"]
+size = Vector2(77, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qu7rb"]
+atlas = ExtResource("1_0fbnm")
+region = Rect2(30, 28, 0, 0)
+margin = Rect2(14, 11, 0, 0)
+
+[node name="FinalPoint" type="Area2D" unique_id=222685693]
+script = ExtResource("1_qu7rb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1619668318]
+position = Vector2(28.5, -22.5)
+shape = SubResource("RectangleShape2D_eked0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1328138391]
+texture = SubResource("AtlasTexture_qu7rb")

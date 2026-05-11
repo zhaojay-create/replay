@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dekkq7sguk3c6"]
+
+[ext_resource type="Script" uid="uid://b5hmeyfs4a671" path="res://scripts/autoload/level_manager.gd" id="1_script"]
+
+[node name="LevelManager" type="Node" unique_id=791883086]
+script = ExtResource("1_script")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=910960852]
+layer = 100
+
+[node name="Overlay" type="ColorRect" parent="CanvasLayer" unique_id=1797654328]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
