@@ -1,8 +1,6 @@
 class_name Entity
 extends CharacterBody2D
 
-signal died(entity: Entity)
-
 @export var max_health: float = 50
 
 var current_health: float
@@ -44,5 +42,3 @@ func play_animation(anim: AnimationWrapper):
 
 func on_animation_finished():
 	current_anim = null
-	if is_dead and animated_sprite.animation == "die":
-		died.emit(self)

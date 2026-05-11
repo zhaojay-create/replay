@@ -1,0 +1,44 @@
+extends Node
+
+# 记录当前的操作
+var current_recording: Array[InputFrame] = []
+# 历史记录，每个元素是一次完整的 run（平行时空）
+var history: Array = []  # Array of { spawn_pos: Vector2, frames: Array[InputFrame] }
+# 是否正在记录
+var is_recording: bool = false
+# 当前 run 的出生点
+var _spawn_position: Vector2 = Vector2.ZERO
+
+
+# 开始记录
+func start_recording(spawn_pos: Vector2) -> void:
+	current_recording.clear()
+	_spawn_position = spawn_pos
+	is_recording = true
+
+
+# 记录当前帧
+func record_frame() -> void:
+	if is_recording:
+		current_recording.append(InputFrame.capture())
+
+# 停止记录并保存
+func stop_and_save() -> void:
+	if not is_recording:
+		return
+	is_recording = false
+	history.append({
+		"spawn_pos": _spawn_position,
+		"frames": current_recording.duplicate(),
+	})
+	current_recording.clear()
+
+# 获取指定索引的 run
+func get_run(index: int) -> Dictionary:
+	if index < 0 or index >= history.size():
+		return {}
+	return history[index]
+
+# 获取 run 的数量
+func get_run_count() -> int:
+	return history.size()

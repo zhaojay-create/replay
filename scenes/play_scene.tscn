@@ -1,12 +1,35 @@
 [gd_scene format=3 uid="uid://bn08i67r53ueu"]
 
 [ext_resource type="PackedScene" uid="uid://d3m0b7r7bjnc0" path="res://scenes/map.tscn" id="1_m1edv"]
+[ext_resource type="Script" uid="uid://f5parhw21jsf" path="res://scripts/scenes/play_scene.gd" id="1_que2y"]
 [ext_resource type="PackedScene" uid="uid://b37qx0imoqovx" path="res://scenes/entity/player.tscn" id="2_wklqy"]
 
-[node name="PlayScene" type="Node2D" unique_id=1751367620]
+[node name="PlayScene" type="Node2D" unique_id=1751367620 node_paths=PackedStringArray("screen_transition")]
+script = ExtResource("1_que2y")
+screen_transition = NodePath("CanvasLayer/ColorRect")
 
 [node name="Map" parent="." unique_id=479970892 instance=ExtResource("1_m1edv")]
 
 [node name="Player" parent="." unique_id=200577764 instance=ExtResource("2_wklqy")]
 z_index = 100
 position = Vector2(268, 386)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1782587990]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1920236269]
+visible = false
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.83606505, 0.88742733, 0.9085985, 1)
+
+[node name="Control" type="Control" parent="." unique_id=1921351027]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
