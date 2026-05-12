@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://whk35wykqudp" path="res://assets/Tiles/FarmLand_Tile.png" id="4_0cso3"]
 [ext_resource type="Script" uid="uid://o6d6vh2v8axm" path="res://scripts/interactable/moving_platform.gd" id="5_2klcf"]
 [ext_resource type="PackedScene" uid="uid://dkfie5ynqt0u6" path="res://scenes/pressure_button.tscn" id="6_2lpho"]
-[ext_resource type="PackedScene" uid="uid://cr0jnc550g0ph" path="res://scenes/final_point.tscn" id="7_final"]
+[ext_resource type="PackedScene" path="res://scenes/final_point.tscn" id="7_final"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wklqy"]
 texture = ExtResource("1_gldc4")
