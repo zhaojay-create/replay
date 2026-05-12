@@ -7,7 +7,7 @@
 [node name="PlayScene" type="Node2D" unique_id=1751367620]
 script = ExtResource("1_que2y")
 
-[node name="MapContainer" type="Node2D" parent="."]
+[node name="MapContainer" type="Node2D" parent="." unique_id=1977241230]
 
 [node name="Player" parent="." unique_id=200577764 instance=ExtResource("2_wklqy")]
 z_index = 100
@@ -35,4 +35,3 @@ grow_vertical = 2
 [node name="GhostContainer" type="Node2D" parent="." unique_id=772881616]
 unique_name_in_owner = true
 script = ExtResource("4_kdvgv")
-
