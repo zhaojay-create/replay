@@ -4,10 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://b37qx0imoqovx" path="res://scenes/entity/player.tscn" id="2_wklqy"]
 [ext_resource type="Script" uid="uid://ddym4geiyk4xt" path="res://scripts/scenes/ghost_container.gd" id="4_kdvgv"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_que2y"]
+size = Vector2(53, 1704)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdvgv"]
+size = Vector2(4572, 90.5)
+
 [node name="PlayScene" type="Node2D" unique_id=1751367620]
 script = ExtResource("1_que2y")
 
 [node name="MapContainer" type="Node2D" parent="." unique_id=1977241230]
+position = Vector2(-83, -279)
 
 [node name="Player" parent="." unique_id=200577764 instance=ExtResource("2_wklqy")]
 z_index = 100
@@ -35,3 +42,19 @@ grow_vertical = 2
 [node name="GhostContainer" type="Node2D" parent="." unique_id=772881616]
 unique_name_in_owner = true
 script = ExtResource("4_kdvgv")
+
+[node name="StaticBody2DLeft" type="StaticBody2D" parent="." unique_id=2126975105]
+collision_layer = 64
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DLeft" unique_id=1429365764]
+position = Vector2(-31, 560)
+shape = SubResource("RectangleShape2D_que2y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=661548163]
+collision_layer = 64
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=361583668]
+position = Vector2(2282, 943.75)
+shape = SubResource("RectangleShape2D_kdvgv")

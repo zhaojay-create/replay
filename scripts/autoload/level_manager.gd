@@ -6,12 +6,13 @@ signal level_changed
 @export var maps: Array[String] = [
 	"res://scenes/maps/map_01.tscn",
 	"res://scenes/maps/map_02.tscn",
+	"res://scenes/maps/map_03.tscn",
 ]
 @export var fade_duration: float = 0.5
 
 const PLAY_SCENE_PATH := "res://scenes/play_scene.tscn"
 
-var current_level_index: int = 0
+var current_level_index: int = 2
 var _is_transitioning: bool = false
 
 @onready var _overlay: ColorRect = $CanvasLayer/Overlay
