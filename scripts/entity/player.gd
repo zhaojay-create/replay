@@ -38,7 +38,6 @@ func _process_alive(_delta: float) -> void:
 	
 	# 攻击
 	if Input.is_action_just_pressed("attack"):
-		print("asda")
 		shoot(8, 6)  # layer=PlayerAttack(8), mask=Ghost(2)+Enemy(4)
 	
 	# 左右移动
