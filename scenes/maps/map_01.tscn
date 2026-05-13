@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cxu5jf8v8jndc" path="res://assets/Sprites/Backgrounds/Default/background_fade_mushrooms.png" id="4_pgpfx"]
 [ext_resource type="PackedScene" uid="uid://dkfie5ynqt0u6" path="res://scenes/pressure_button.tscn" id="6_2lpho"]
 [ext_resource type="Texture2D" uid="uid://bdx87s4udteb" path="res://assets/Sprites/Backgrounds/Default/background_clouds.png" id="6_4228d"]
-[ext_resource type="PackedScene" uid="uid://cr0jnc550g0ph" path="res://scenes/final_point.tscn" id="7_final"]
+[ext_resource type="PackedScene" path="res://scenes/final_point.tscn" id="7_final"]
 [ext_resource type="Texture2D" uid="uid://dq162mpyqbfwl" path="res://assets/Sprites/Backgrounds/Default/background_solid_sky.png" id="7_ru6md"]
 [ext_resource type="Texture2D" uid="uid://c4qi630y164fc" path="res://assets/Sprites/Tiles/Default/terrain_dirt_block.png" id="9_omibp"]
 [ext_resource type="Texture2D" uid="uid://cn6pvst13w8pb" path="res://assets/Sprites/Tiles/Default/terrain_dirt_block_top_right.png" id="10_6lp7a"]
@@ -5335,21 +5335,37 @@ texture = ExtResource("26_lhmpk")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aa362"]
 texture = ExtResource("27_2h8uf")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ab70a"]
 texture = ExtResource("28_wrvv7")
@@ -5437,7 +5453,7 @@ tile_map_data = PackedByteArray("AAAMABoAAAABAAEAAAANABoAAAABAAEAAAAOABoAAAABAAE
 tile_set = SubResource("TileSet_2lpho")
 
 [node name="PressureButton" parent="." unique_id=171890335 node_paths=PackedStringArray("platform") instance=ExtResource("6_2lpho")]
-position = Vector2(933, 490)
+position = Vector2(950, 534)
 platform = NodePath("../MoveWall")
 move_offset = Vector2(0, -128)
 
