@@ -12,7 +12,7 @@ signal level_changed
 
 const PLAY_SCENE_PATH := "res://scenes/play_scene.tscn"
 
-var current_level_index: int = 2
+var current_level_index: int = 1
 var _is_transitioning: bool = false
 
 @onready var _overlay: ColorRect = $CanvasLayer/Overlay

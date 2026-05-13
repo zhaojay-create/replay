@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://bpittfymrjbm5" path="res://assets/Sprites/Tiles/Default/terrain_dirt_block_right.png" id="26_lhmpk"]
 [ext_resource type="Texture2D" uid="uid://bykm2ainfe7b4" path="res://assets/Sprites/Tiles/Default/terrain_dirt_block_top.png" id="27_2h8uf"]
 [ext_resource type="Texture2D" uid="uid://dpnb2ktf8l4la" path="res://assets/Sprites/Tiles/Default/terrain_dirt_block_top_left.png" id="28_wrvv7"]
-[ext_resource type="Script" uid="uid://ccacaruv5p8u6" path="res://scripts/interactable/pressure_group.gd" id="32_omibp"]
+[ext_resource type="Script" uid="uid://b4g866n562mt2" path="res://scripts/interactable/plate_toggle_group.gd" id="33_6lp7a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6lp7a"]
 texture = ExtResource("2_5dti3")
@@ -5457,14 +5457,15 @@ position = Vector2(951, 56)
 collision_layer = 128
 collision_mask = 3
 
-[node name="PressureGroup" type="Node" parent="." unique_id=595064506 node_paths=PackedStringArray("buttons", "platform")]
-script = ExtResource("32_omibp")
+[node name="PlateToggleGroup" type="Node" parent="." unique_id=2145142798 node_paths=PackedStringArray("buttons", "platform")]
+script = ExtResource("33_6lp7a")
 buttons = [NodePath("PressureButton")]
 platform = NodePath("MoveWall")
+move_offset = Vector2(0, -128)
 
-[node name="MoveWall" type="TileMapLayer" parent="PressureGroup" unique_id=1334677379]
+[node name="MoveWall" type="TileMapLayer" parent="PlateToggleGroup" unique_id=1334677379]
 tile_map_data = PackedByteArray("AAAMABoAAAABAAEAAAANABoAAAABAAEAAAAOABoAAAABAAEAAAAPABoAAAABAAEAAAAQABoAAAABAAEAAAARABoAAAABAAEAAAASABoAAAABAAEAAAATABoAAAABAAEAAAAXABoAAAABAAEAAAAYABoAAAABAAEAAAAZABoAAAABAAEAAAAaABoAAAABAAEAAAAbABoAAAABAAEAAAAcABoAAAABAAEAAAAdABoAAAABAAEAAAAeABoAAAABAAEAAAAfABoAAAABAAEAAAAkABoAAAABAAEAAAAlABoAAAABAAEAAAAmABoAAAABAAEAAAAnABoAAAABAAEAAAAoABoAAAABAAEAAAAoABkAAAABAAEAAAAoABgAAAABAAEAAAAoABcAAAABAAEAAAApABcAAAABAAEAAAAqABcAAAABAAEAAAArABcAAAABAAEAAAAsABcAAAABAAEAAAAsABYAAAABAAEAAAAsABUAAAABAAEAAAAtABUAAAABAAEAAAAtABQAAAABAAEAAAAtABMAAAABAAEAAAAuABMAAAABAAEAAAAvABMAAAABAAEAAAAvABIAAAABAAEAAAAvABEAAAABAAEAAAA1AA4AAAABAAEAAAA2AA4AAAABAAEAAAA3AA4AAAABAAEAAAA4AA4AAAABAAEAAAA5AA4AAAABAAEAAAA6AA4AAAABAAEAAAA7AA4AAAABAAEAAAA8AA4AAAABAAEAAAA9AA4AAAABAAEAAAA+AA4AAAABAAEAAAA/AA4AAAABAAEAAAAvABAAAAABAAEAAAAwABAAAAABAAEAAAAxABAAAAABAAEAAAAyABAAAAABAAEAAAAzABAAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_2lpho")
 
-[node name="PressureButton" parent="PressureGroup" unique_id=171890335 instance=ExtResource("6_2lpho")]
+[node name="PressureButton" parent="PlateToggleGroup" unique_id=171890335 instance=ExtResource("6_2lpho")]
 position = Vector2(950, 534)

@@ -27,9 +27,9 @@
 [ext_resource type="Texture2D" uid="uid://bpittfymrjbm5" path="res://assets/Sprites/Tiles/Default/terrain_dirt_block_right.png" id="26_2xwei"]
 [ext_resource type="Texture2D" uid="uid://bykm2ainfe7b4" path="res://assets/Sprites/Tiles/Default/terrain_dirt_block_top.png" id="27_mo0wc"]
 [ext_resource type="Texture2D" uid="uid://dpnb2ktf8l4la" path="res://assets/Sprites/Tiles/Default/terrain_dirt_block_top_left.png" id="28_btupl"]
-[ext_resource type="Script" uid="uid://ccacaruv5p8u6" path="res://scripts/interactable/pressure_group.gd" id="29_o5cjs"]
 [ext_resource type="PackedScene" uid="uid://dkfie5ynqt0u6" path="res://scenes/pressure_button.tscn" id="30_44lk7"]
 [ext_resource type="PackedScene" path="res://scenes/final_point.tscn" id="31_mct5n"]
+[ext_resource type="Script" uid="uid://qbayxdx52286" path="res://scripts/interactable/plate_pressure_group.gd" id="32_kul0u"]
 [ext_resource type="Texture2D" uid="uid://1amllkj7enjl" path="res://assets/Sprites/Tiles/Default/block_spikes.png" id="32_o6w71"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g0w0j"]
@@ -5469,17 +5469,17 @@ position = Vector2(1118, 549)
 collision_layer = 128
 collision_mask = 3
 
-[node name="PressureGroup" type="Node" parent="." unique_id=1820184890 node_paths=PackedStringArray("buttons", "platform")]
-script = ExtResource("29_o5cjs")
+[node name="PlatePressureGroup" type="Node" parent="." unique_id=508705327 node_paths=PackedStringArray("buttons", "platform")]
+script = ExtResource("32_kul0u")
 buttons = [NodePath("PressureButton"), NodePath("PressureButton2")]
 platform = NodePath("MultiMovePlatfrom")
 
-[node name="PressureButton" parent="PressureGroup" unique_id=171890335 instance=ExtResource("30_44lk7")]
+[node name="PressureButton" parent="PlatePressureGroup" unique_id=171890335 instance=ExtResource("30_44lk7")]
 position = Vector2(133, 534)
 
-[node name="PressureButton2" parent="PressureGroup" unique_id=2139571546 instance=ExtResource("30_44lk7")]
+[node name="PressureButton2" parent="PlatePressureGroup" unique_id=2139571546 instance=ExtResource("30_44lk7")]
 position = Vector2(532, 535)
 
-[node name="MultiMovePlatfrom" type="TileMapLayer" parent="PressureGroup" unique_id=157490315]
+[node name="MultiMovePlatfrom" type="TileMapLayer" parent="PlatePressureGroup" unique_id=157490315]
 tile_map_data = PackedByteArray("AAAsAB8AAAAAAAAAAAAsACAAAAAAAAEAAAAsACEAAAAAAAIAAAAsACIAAAAAAAMAAAAtAB8AAAABAAAAAAAtACAAAAABAAEAAAAtACEAAAABAAIAAAAtACIAAAABAAMAAAAuAB8AAAACAAAAAAAuACAAAAACAAEAAAAuACEAAAACAAIAAAAuACIAAAACAAMAAAAvAB8AAAADAAAAAAAvACAAAAADAAEAAAAvACEAAAADAAIAAAAvACIAAAADAAMAAAAwAB8AAAAAAAAAAAAwACAAAAAAAAEAAAAwACEAAAAAAAIAAAAwACIAAAAAAAMAAAAxAB8AAAABAAAAAAAxACAAAAABAAEAAAAxACEAAAABAAIAAAAxACIAAAABAAMAAAAyAB8AAAACAAAAAAAyACAAAAACAAEAAAAyACEAAAACAAIAAAAyACIAAAACAAMAAAAzAB8AAAADAAAAAAAzACAAAAADAAEAAAAzACEAAAADAAIAAAAzACIAAAADAAMAAAAsABsAAAAAAAAAAAAsABwAAAAAAAEAAAAsAB0AAAAAAAIAAAAsAB4AAAAAAAMAAAAtABsAAAABAAAAAAAtABwAAAABAAEAAAAtAB0AAAABAAIAAAAtAB4AAAABAAMAAAAuABsAAAACAAAAAAAuABwAAAACAAEAAAAuAB0AAAACAAIAAAAuAB4AAAACAAMAAAAvABsAAAADAAAAAAAvABwAAAADAAEAAAAvAB0AAAADAAIAAAAvAB4AAAADAAMAAAAwABsAAAAAAAAAAAAwABwAAAAAAAEAAAAwAB0AAAAAAAIAAAAwAB4AAAAAAAMAAAAxABsAAAABAAAAAAAxABwAAAABAAEAAAAxAB0AAAABAAIAAAAxAB4AAAABAAMAAAAyABsAAAACAAAAAAAyABwAAAACAAEAAAAyAB0AAAACAAIAAAAyAB4AAAACAAMAAAAzABsAAAADAAAAAAAzABwAAAADAAEAAAAzAB0AAAADAAIAAAAzAB4AAAADAAMAAAAwABcAAAAAAAAAAAAwABgAAAAAAAEAAAAwABkAAAAAAAIAAAAwABoAAAAAAAMAAAAxABcAAAABAAAAAAAxABgAAAABAAEAAAAxABkAAAABAAIAAAAxABoAAAABAAMAAAAyABcAAAACAAAAAAAyABgAAAACAAEAAAAyABkAAAACAAIAAAAyABoAAAACAAMAAAAzABcAAAADAAAAAAAzABgAAAADAAEAAAAzABkAAAADAAIAAAAzABoAAAADAAMAAAAwABMAAAAAAAAAAAAwABQAAAAAAAEAAAAwABUAAAAAAAIAAAAwABYAAAAAAAMAAAAxABMAAAABAAAAAAAxABQAAAABAAEAAAAxABUAAAABAAIAAAAxABYAAAABAAMAAAAyABMAAAACAAAAAAAyABQAAAACAAEAAAAyABUAAAACAAIAAAAyABYAAAACAAMAAAAzABMAAAADAAAAAAAzABQAAAADAAEAAAAzABUAAAADAAIAAAAzABYAAAADAAMAAAA=")
 tile_set = SubResource("TileSet_71u05")
